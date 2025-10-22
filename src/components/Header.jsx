@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Search, User, ShoppingCart, Menu, X } from 'lucide-react';
+import { siteConfig, animationConfig } from '../config/siteConfig';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
-    const navItems = [
-        { name: 'Home', href: '#home' },
-        { name: 'Decor', href: '#categories' },
-        { name: 'Inspiration', href: '#rooms' },
-        { name: 'Collections', href: '#products' },
-        { name: 'Contact', href: '#contact' }
-    ];
+    const { navigation, brand } = siteConfig;
 
     // Smooth scroll function
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId.replace('#', ''));
         if (element) {
-            const offsetTop = element.offsetTop - 80; // Account for fixed header
+            const offsetTop = element.offsetTop - animationConfig.scrollOffset;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -64,13 +59,13 @@ const Header = () => {
                             onClick={() => scrollToSection('#home')}
                             className="text-2xl font-bold text-gray-900 hover:text-primary-500 transition-colors duration-200"
                         >
-                            <span className="text-primary-500">H</span>ome<span className="text-primary-500">V</span>ibes
+                            <span className="text-primary-500">{brand.name.charAt(0)}</span>{brand.name.slice(1, 4)}<span className="text-primary-500">{brand.name.charAt(4)}</span>{brand.name.slice(5)}
                         </button>
                     </div>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex space-x-8">
-                        {navItems.map((item) => (
+                        {navigation.main.map((item) => (
                             <button
                                 key={item.name}
                                 onClick={() => scrollToSection(item.href)}
@@ -132,7 +127,7 @@ const Header = () => {
                 {isMenuOpen && (
                     <div className="md:hidden py-4 border-t border-gray-100 animate-slideDown">
                         <nav className="flex flex-col space-y-4">
-                            {navItems.map((item) => (
+                            {navigation.main.map((item) => (
                                 <button
                                     key={item.name}
                                     onClick={() => scrollToSection(item.href)}

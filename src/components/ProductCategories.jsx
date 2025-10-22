@@ -1,11 +1,14 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../utils/scrollUtils';
+import { siteConfig, animationConfig } from '../config/siteConfig';
 
 const ProductCategories = () => {
-    const [headerRef, isHeaderVisible] = useScrollAnimation(0.2);
-    const [gridRef, isGridVisible] = useScrollAnimation(0.1);
-    const categories = [
+    const [headerRef, isHeaderVisible] = useScrollAnimation(animationConfig.intersectionThreshold.header);
+    const [gridRef, isGridVisible] = useScrollAnimation(animationConfig.intersectionThreshold.grid);
+    
+    const { categories } = siteConfig;
+    const categoryItems = [
         {
             id: 1,
             name: 'Wall Art',
@@ -41,21 +44,21 @@ const ProductCategories = () => {
                         }`}
                 >
                     <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                        Explore
+                        {categories.sectionTitle}
                         <br />
-                        <span className="text-gray-600">decor styles</span>
+                        <span className="text-gray-600">{categories.sectionSubtitle}</span>
                     </h2>
 
                     {/* Category Stats */}
                     <div className="flex items-center space-x-6 text-sm text-gray-600">
                         <div className="flex items-center">
                             <div className="w-8 h-8 bg-primary-500 rounded mr-2 flex items-center justify-center">
-                                <span className="text-white text-xs">🏠</span>
+                                <span className="text-white text-xs">{categories.stats.icon}</span>
                             </div>
-                            <span>Home Decor</span>
+                            <span>{categories.stats.category}</span>
                         </div>
                         <div className="flex items-center">
-                            <span className="font-medium">Seasonal Collections</span>
+                            <span className="font-medium">{categories.stats.description}</span>
                         </div>
                     </div>
 
@@ -63,7 +66,7 @@ const ProductCategories = () => {
                     <div className="mt-4">
                         <button className="text-sm text-gray-600 hover:text-primary-500 transition-colors duration-200 flex items-center">
                             <span className="border-b border-gray-300 hover:border-primary-500 transition-colors duration-200">
-                                BROWSE ALL DECOR
+                                {categories.ctaText}
                             </span>
                             <ArrowRight className="ml-1 h-3 w-3" />
                         </button>
@@ -75,7 +78,7 @@ const ProductCategories = () => {
                     ref={gridRef}
                     className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 >
-                    {categories.map((category, index) => (
+                                        {categories.items.map((category, index) => (
                         <div
                             key={category.id}
                             className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-8 transition-all duration-500 cursor-pointer group hover:scale-105 hover:shadow-lg ${isGridVisible

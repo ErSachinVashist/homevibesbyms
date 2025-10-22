@@ -1,8 +1,10 @@
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
+import { siteConfig } from '../config/siteConfig';
 
 const HotProducts = () => {
-    const products = [
+    const { hotProducts } = siteConfig;
+    const products = hotProducts.products || [
         {
             id: 1,
             name: 'Autumn Leaf Wall Art',
@@ -101,12 +103,6 @@ const HotProducts = () => {
         },
     ];
 
-    const categories = [
-        { name: 'New Arrivals', active: true },
-        { name: 'Customer Favorites', active: false },
-        { name: 'Trending Decor', active: false },
-    ];
-
     const renderStars = (rating) => {
         return [...Array(5)].map((_, index) => (
             <Star
@@ -125,11 +121,11 @@ const HotProducts = () => {
                 {/* Section Header */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Decor</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{hotProducts.sectionTitle}</h2>
 
                         {/* Category Tabs */}
                         <div className="flex space-x-8">
-                            {categories.map((category, index) => (
+                            {hotProducts.categories.map((category, index) => (
                                 <button
                                     key={index}
                                     className={`text-sm font-medium pb-2 border-b-2 transition-colors duration-200 ${category.active
@@ -145,7 +141,7 @@ const HotProducts = () => {
 
                     {/* All Products Link */}
                     <button className="mt-4 lg:mt-0 inline-flex items-center text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200">
-                        Browse All Decor
+                        {hotProducts.ctaText}
                         <ArrowRight className="ml-2 h-4 w-4" />
                     </button>
                 </div>

@@ -1,13 +1,16 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '../utils/scrollUtils';
+import { siteConfig, animationConfig, themeConfig } from '../config/siteConfig';
 
 const HeroSection = () => {
-    const [contentRef, isContentVisible] = useScrollAnimation(0.2);
-    const [imageRef, isImageVisible] = useScrollAnimation(0.3);
+    const [contentRef, isContentVisible] = useScrollAnimation(animationConfig.intersectionThreshold.content);
+    const [imageRef, isImageVisible] = useScrollAnimation(animationConfig.intersectionThreshold.image);
+    
+    const { hero } = siteConfig;
 
     return (
-        <section className="relative bg-gradient-to-br from-gray-50 via-green-50 to-gray-100 overflow-hidden">
+        <section className={`relative bg-gradient-to-br ${themeConfig.gradients.hero} overflow-hidden`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="relative flex items-center min-h-[600px] lg:min-h-[700px]">
                     {/* Left Content */}
@@ -19,30 +22,30 @@ const HeroSection = () => {
                             }`}
                     >
                         {/* Badge */}
-                        <div className={`inline-flex items-center bg-white rounded-full px-4 py-2 shadow-sm mb-6 transition-all duration-500 delay-200 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                            }`}>
-                            <span className="text-sm font-medium text-gray-700">HomeVibes Decor</span>
-                            <span className="ml-2 text-sm text-gray-500">Est. 2020</span>
+                        <div className={`inline-flex items-center bg-white rounded-full px-4 py-2 shadow-sm mb-6 transition-all duration-500`} 
+                             style={{ transitionDelay: `${animationConfig.delays.badge}ms` }}>
+                            <span className="text-sm font-medium text-gray-700">{hero.badge.company}</span>
+                            <span className="ml-2 text-sm text-gray-500">{hero.badge.established}</span>
                         </div>
 
                         {/* New Collection */}
-                        <p className={`text-primary-500 font-semibold text-sm uppercase tracking-wide mb-4 transition-all duration-500 delay-300 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                            }`}>
-                            NEW COLLECTION
+                        <p className={`text-primary-500 font-semibold text-sm uppercase tracking-wide mb-4 transition-all duration-500`}
+                           style={{ transitionDelay: `${animationConfig.delays.announcement}ms` }}>
+                            {hero.announcement}
                         </p>
 
                         {/* Main Heading */}
-                        <h1 className={`text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 transition-all duration-700 delay-400 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                            }`}>
-                            Autumn
+                        <h1 className={`text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 transition-all duration-700 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                            style={{ transitionDelay: `${animationConfig.delays.title}ms` }}>
+                            {hero.title}
                             <br />
-                            <span className="text-gray-700">Decor</span>
+                            <span className="text-gray-700">{hero.subtitle}</span>
                         </h1>
 
                         {/* CTA Button */}
-                        <button className={`inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-500 delay-600 group hover:scale-105 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                            }`}>
-                            Explore Collection
+                        <button className={`inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-500 group hover:scale-105 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                                style={{ transitionDelay: `${animationConfig.delays.cta}ms` }}>
+                            {hero.cta}
                             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </button>
                     </div>

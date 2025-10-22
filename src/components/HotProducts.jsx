@@ -5,91 +5,91 @@ const HotProducts = () => {
     const products = [
         {
             id: 1,
-            name: 'Chair Padded Seat',
-            originalPrice: 120.00,
-            salePrice: 85.00,
+            name: 'Autumn Leaf Wall Art',
+            originalPrice: 89.00,
+            salePrice: 65.00,
             rating: 4.5,
             reviews: 15,
             badge: 'SALE',
             badgeColor: 'bg-red-500',
-            image: 'chair-gray',
-            color: 'bg-gray-500'
+            image: 'wall-art',
+            color: 'bg-amber-400'
         },
         {
             id: 2,
-            name: 'Edmond Decorative 2',
-            originalPrice: 125.00,
-            salePrice: 95.00,
+            name: 'Ceramic Vase Set',
+            originalPrice: 75.00,
+            salePrice: 55.00,
             rating: 4.8,
             reviews: 23,
             badge: 'HOT',
             badgeColor: 'bg-orange-500',
-            image: 'chair-beige',
-            color: 'bg-orange-200'
+            image: 'ceramic-vase',
+            color: 'bg-orange-300'
         },
         {
             id: 3,
-            name: 'Aqua Gliders 2',
-            originalPrice: 189.99,
-            salePrice: 149.99,
+            name: 'Boho Throw Pillows',
+            originalPrice: 45.99,
+            salePrice: 32.99,
             rating: 4.3,
             reviews: 8,
             badge: 'SALE',
             badgeColor: 'bg-red-500',
-            image: 'chair-dark',
-            color: 'bg-gray-700'
+            image: 'throw-pillows',
+            color: 'bg-rose-400'
         },
         {
             id: 4,
-            name: 'Aqua Gliders',
-            originalPrice: 186.99,
-            salePrice: 156.66,
+            name: 'Macrame Plant Hanger',
+            originalPrice: 35.99,
+            salePrice: 28.99,
             rating: 4.7,
             reviews: 12,
             badge: 'HOT',
             badgeColor: 'bg-orange-500',
-            image: 'chair-light',
-            color: 'bg-gray-300'
+            image: 'macrame-hanger',
+            color: 'bg-green-400'
         },
         {
             id: 5,
-            name: 'Suspension Lamp',
+            name: 'Edison Bulb Lamp',
             originalPrice: 89.99,
             salePrice: 69.99,
             rating: 4.2,
             reviews: 18,
             badge: 'HOT',
             badgeColor: 'bg-orange-500',
-            image: 'lamp',
+            image: 'edison-lamp',
             color: 'bg-yellow-600'
         },
         {
             id: 6,
-            name: 'Ergonomic Chair',
-            originalPrice: 299.99,
-            salePrice: 199.99,
+            name: 'Woven Storage Basket',
+            originalPrice: 65.00,
+            salePrice: 48.00,
             rating: 4.9,
             reviews: 45,
             badge: 'HOT',
             badgeColor: 'bg-orange-500',
-            image: 'office-chair',
-            color: 'bg-blue-400'
+            image: 'storage-basket',
+            color: 'bg-amber-300'
         },
         {
             id: 7,
-            name: 'Sunburst Clock',
+            name: 'Golden Mirror Set',
             originalPrice: 159.99,
             salePrice: 129.99,
             rating: 4.6,
             reviews: 31,
             badge: 'HOT',
             badgeColor: 'bg-orange-500',
-            image: 'clock',
+            image: 'golden-mirror',
             color: 'bg-yellow-400'
         },
         {
             id: 8,
-            name: 'Wall Clock Modern',
+            name: 'Minimalist Wall Clock',
             originalPrice: 79.99,
             salePrice: 59.99,
             rating: 4.4,
@@ -97,14 +97,14 @@ const HotProducts = () => {
             badge: 'SALE',
             badgeColor: 'bg-red-500',
             image: 'wall-clock',
-            color: 'bg-gray-400'
+            color: 'bg-slate-400'
         },
     ];
 
     const categories = [
-        { name: 'Latest Products', active: true },
-        { name: 'Top Rated', active: false },
-        { name: 'Best Selling', active: false },
+        { name: 'New Arrivals', active: true },
+        { name: 'Customer Favorites', active: false },
+        { name: 'Trending Decor', active: false },
     ];
 
     const renderStars = (rating) => {
@@ -112,8 +112,8 @@ const HotProducts = () => {
             <Star
                 key={index}
                 className={`h-3 w-3 ${index < Math.floor(rating)
-                        ? 'text-yellow-400 fill-current'
-                        : 'text-gray-300'
+                    ? 'text-yellow-400 fill-current'
+                    : 'text-gray-300'
                     }`}
             />
         ));
@@ -125,7 +125,7 @@ const HotProducts = () => {
                 {/* Section Header */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Hot Products</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Decor</h2>
 
                         {/* Category Tabs */}
                         <div className="flex space-x-8">
@@ -133,8 +133,8 @@ const HotProducts = () => {
                                 <button
                                     key={index}
                                     className={`text-sm font-medium pb-2 border-b-2 transition-colors duration-200 ${category.active
-                                            ? 'text-primary-500 border-primary-500'
-                                            : 'text-gray-600 border-transparent hover:text-gray-900'
+                                        ? 'text-primary-500 border-primary-500'
+                                        : 'text-gray-600 border-transparent hover:text-gray-900'
                                         }`}
                                 >
                                     {category.name}
@@ -145,7 +145,7 @@ const HotProducts = () => {
 
                     {/* All Products Link */}
                     <button className="mt-4 lg:mt-0 inline-flex items-center text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200">
-                        All products
+                        Browse All Decor
                         <ArrowRight className="ml-2 h-4 w-4" />
                     </button>
                 </div>

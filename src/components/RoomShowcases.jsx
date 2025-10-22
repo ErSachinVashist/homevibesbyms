@@ -20,10 +20,10 @@ const RoomShowcases = () => {
 
                             {/* Overlay Content */}
                             <div className="relative z-10 text-center text-white">
-                                <p className="text-sm uppercase tracking-wide mb-2 opacity-90">NEW FURNITURE</p>
-                                <h3 className="text-3xl font-bold mb-4">Living Room</h3>
+                                <p className="text-sm uppercase tracking-wide mb-2 opacity-90">DECOR INSPIRATION</p>
+                                <h3 className="text-3xl font-bold mb-4">Cozy Living</h3>
                                 <button className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2 px-5 rounded-lg transition-colors duration-200 group">
-                                    Shop now
+                                    Get Ideas
                                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                                 </button>
                             </div>
@@ -56,10 +56,10 @@ const RoomShowcases = () => {
 
                             {/* Overlay Content */}
                             <div className="relative z-10 text-center text-white">
-                                <p className="text-sm uppercase tracking-wide mb-2 opacity-90">NEW FURNITURE</p>
-                                <h3 className="text-3xl font-bold mb-4">Dining Room</h3>
+                                <p className="text-sm uppercase tracking-wide mb-2 opacity-90">STYLING GUIDE</p>
+                                <h3 className="text-3xl font-bold mb-4">Kitchen Decor</h3>
                                 <button className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2 px-5 rounded-lg transition-colors duration-200 group">
-                                    Shop now
+                                    Explore Style
                                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                                 </button>
                             </div>

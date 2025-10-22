@@ -7,9 +7,9 @@ const Header = () => {
 
     const navItems = [
         { name: 'Home', href: '#home' },
-        { name: 'Categories', href: '#categories' },
-        { name: 'Rooms', href: '#rooms' },
-        { name: 'Products', href: '#products' },
+        { name: 'Decor', href: '#categories' },
+        { name: 'Inspiration', href: '#rooms' },
+        { name: 'Collections', href: '#products' },
         { name: 'Contact', href: '#contact' }
     ];
 
@@ -64,7 +64,7 @@ const Header = () => {
                             onClick={() => scrollToSection('#home')}
                             className="text-2xl font-bold text-gray-900 hover:text-primary-500 transition-colors duration-200"
                         >
-                            <span className="text-primary-500">D</span>AVICI
+                            <span className="text-primary-500">H</span>ome<span className="text-primary-500">V</span>ibes
                         </button>
                     </div>
 
@@ -75,8 +75,8 @@ const Header = () => {
                                 key={item.name}
                                 onClick={() => scrollToSection(item.href)}
                                 className={`relative font-medium transition-all duration-300 py-2 ${activeSection === item.href.replace('#', '')
-                                        ? 'text-primary-500'
-                                        : 'text-gray-700 hover:text-primary-500'
+                                    ? 'text-primary-500'
+                                    : 'text-gray-700 hover:text-primary-500'
                                     }`}
                             >
                                 {item.name}
@@ -137,8 +137,8 @@ const Header = () => {
                                     key={item.name}
                                     onClick={() => scrollToSection(item.href)}
                                     className={`text-left font-medium transition-all duration-200 py-2 px-2 rounded-lg ${activeSection === item.href.replace('#', '')
-                                            ? 'text-primary-500 bg-primary-50'
-                                            : 'text-gray-700 hover:text-primary-500 hover:bg-gray-50'
+                                        ? 'text-primary-500 bg-primary-50'
+                                        : 'text-gray-700 hover:text-primary-500 hover:bg-gray-50'
                                         }`}
                                 >
                                     {item.name}

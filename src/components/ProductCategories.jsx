@@ -8,24 +8,24 @@ const ProductCategories = () => {
     const categories = [
         {
             id: 1,
-            name: 'Dining Chair',
-            icon: '🪑',
-            bgColor: 'bg-orange-100',
-            hoverColor: 'hover:bg-orange-200',
+            name: 'Wall Art',
+            icon: '🖼️',
+            bgColor: 'bg-purple-100',
+            hoverColor: 'hover:bg-purple-200',
         },
         {
             id: 2,
-            name: 'Sofas',
-            icon: '🛋️',
-            bgColor: 'bg-gray-100',
-            hoverColor: 'hover:bg-gray-200',
+            name: 'Lighting',
+            icon: '�',
+            bgColor: 'bg-amber-100',
+            hoverColor: 'hover:bg-amber-200',
         },
         {
             id: 3,
-            name: 'Tables',
-            icon: '🪑',
-            bgColor: 'bg-green-100',
-            hoverColor: 'hover:bg-green-200',
+            name: 'Textiles',
+            icon: '🏺',
+            bgColor: 'bg-rose-100',
+            hoverColor: 'hover:bg-rose-200',
         },
     ];
 
@@ -36,26 +36,26 @@ const ProductCategories = () => {
                 <div
                     ref={headerRef}
                     className={`mb-12 transition-all duration-700 ${isHeaderVisible
-                            ? 'opacity-100 translate-y-0'
-                            : 'opacity-0 translate-y-8'
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-8'
                         }`}
                 >
                     <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                        Shop
+                        Explore
                         <br />
-                        <span className="text-gray-600">by categories</span>
+                        <span className="text-gray-600">decor styles</span>
                     </h2>
 
                     {/* Category Stats */}
                     <div className="flex items-center space-x-6 text-sm text-gray-600">
                         <div className="flex items-center">
-                            <div className="w-8 h-8 bg-gray-800 rounded mr-2 flex items-center justify-center">
-                                <span className="text-white text-xs">🪑</span>
+                            <div className="w-8 h-8 bg-primary-500 rounded mr-2 flex items-center justify-center">
+                                <span className="text-white text-xs">🏠</span>
                             </div>
-                            <span>Chair</span>
+                            <span>Home Decor</span>
                         </div>
                         <div className="flex items-center">
-                            <span className="font-medium">Office Products</span>
+                            <span className="font-medium">Seasonal Collections</span>
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@ const ProductCategories = () => {
                     <div className="mt-4">
                         <button className="text-sm text-gray-600 hover:text-primary-500 transition-colors duration-200 flex items-center">
                             <span className="border-b border-gray-300 hover:border-primary-500 transition-colors duration-200">
-                                SEE ALL CATEGORIES
+                                BROWSE ALL DECOR
                             </span>
                             <ArrowRight className="ml-1 h-3 w-3" />
                         </button>
@@ -79,8 +79,8 @@ const ProductCategories = () => {
                         <div
                             key={category.id}
                             className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-8 transition-all duration-500 cursor-pointer group hover:scale-105 hover:shadow-lg ${isGridVisible
-                                    ? 'opacity-100 translate-y-0'
-                                    : 'opacity-0 translate-y-8'
+                                ? 'opacity-100 translate-y-0'
+                                : 'opacity-0 translate-y-8'
                                 }`}
                             style={{
                                 transitionDelay: isGridVisible ? `${index * 150}ms` : '0ms'

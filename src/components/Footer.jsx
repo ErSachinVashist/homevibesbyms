@@ -9,10 +9,10 @@ const Footer = () => {
                     {/* Company Info */}
                     <div>
                         <div className="text-2xl font-bold mb-4">
-                            <span className="text-primary-500">D</span>AVICI
+                            <span className="text-primary-500">H</span>ome<span className="text-primary-500">V</span>ibes
                         </div>
                         <p className="text-gray-300 mb-4">
-                            Creating beautiful, functional furniture for modern homes since 2020.
+                            Transforming spaces with beautiful home decor and accessories since 2020.
                         </p>
                         <div className="flex space-x-4">
                             <Facebook className="h-5 w-5 text-gray-300 hover:text-primary-500 cursor-pointer transition-colors" />
@@ -26,20 +26,20 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
                             <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">About Us</a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Products</a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Blog</a></li>
+                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Decor Collections</a></li>
+                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Design Blog</a></li>
                             <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Contact</a></li>
                         </ul>
                     </div>
 
                     {/* Categories */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Categories</h3>
+                        <h3 className="text-lg font-semibold mb-4">Decor Styles</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Living Room</a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Dining Room</a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Bedroom</a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Office</a></li>
+                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Wall Art</a></li>
+                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Lighting</a></li>
+                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Textiles</a></li>
+                            <li><a href="#" className="text-gray-300 hover:text-primary-500 transition-colors">Plants & Vases</a></li>
                         </ul>
                     </div>
 
@@ -53,11 +53,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <Mail className="h-4 w-4 mr-3 text-primary-500" />
-                                <span className="text-gray-300">info@davici.com</span>
+                                <span className="text-gray-300">hello@homevibes.com</span>
                             </li>
                             <li className="flex items-start">
                                 <MapPin className="h-4 w-4 mr-3 mt-1 text-primary-500" />
-                                <span className="text-gray-300">123 Furniture St.<br />Design City, DC 12345</span>
+                                <span className="text-gray-300">456 Decor Lane<br />Style City, SC 67890</span>
                             </li>
                         </ul>
                     </div>
@@ -65,7 +65,7 @@ const Footer = () => {
 
                 <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-gray-400 text-sm">
-                        © 2025 DAVICI. All rights reserved.
+                        © 2025 HomeVibes. All rights reserved.
                     </p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" className="text-gray-400 hover:text-primary-500 text-sm transition-colors">Privacy Policy</a>

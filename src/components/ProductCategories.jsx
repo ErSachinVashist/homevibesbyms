@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useScrollAnimation } from '../utils/scrollUtils';
 
 const ProductCategories = () => {
+    const [headerRef, isHeaderVisible] = useScrollAnimation(0.2);
+    const [gridRef, isGridVisible] = useScrollAnimation(0.1);
     const categories = [
         {
             id: 1,
@@ -30,7 +33,13 @@ const ProductCategories = () => {
         <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="mb-12">
+                <div
+                    ref={headerRef}
+                    className={`mb-12 transition-all duration-700 ${isHeaderVisible
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-8'
+                        }`}
+                >
                     <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                         Shop
                         <br />
@@ -62,11 +71,20 @@ const ProductCategories = () => {
                 </div>
 
                 {/* Category Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {categories.map((category) => (
+                <div
+                    ref={gridRef}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                >
+                    {categories.map((category, index) => (
                         <div
                             key={category.id}
-                            className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-8 transition-all duration-300 cursor-pointer group hover:scale-105 hover:shadow-lg`}
+                            className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-8 transition-all duration-500 cursor-pointer group hover:scale-105 hover:shadow-lg ${isGridVisible
+                                    ? 'opacity-100 translate-y-0'
+                                    : 'opacity-0 translate-y-8'
+                                }`}
+                            style={{
+                                transitionDelay: isGridVisible ? `${index * 150}ms` : '0ms'
+                            }}
                         >
                             <div className="flex flex-col items-center text-center">
                                 {/* Category Icon */}

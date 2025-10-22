@@ -10,13 +10,23 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main>
-        <HeroSection />
-        <ProductCategories />
-        <RoomShowcases />
-        <HotProducts />
+      <main className="pt-16"> {/* Add padding to account for fixed header */}
+        <section id="home">
+          <HeroSection />
+        </section>
+        <section id="categories">
+          <ProductCategories />
+        </section>
+        <section id="rooms">
+          <RoomShowcases />
+        </section>
+        <section id="products">
+          <HotProducts />
+        </section>
       </main>
-      <Footer />
+      <section id="contact">
+        <Footer />
+      </section>
     </div>
   );
 }

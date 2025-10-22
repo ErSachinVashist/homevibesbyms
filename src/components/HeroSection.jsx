@@ -6,7 +6,7 @@ import { siteConfig, animationConfig, themeConfig } from '../config/siteConfig';
 const HeroSection = () => {
     const [contentRef, isContentVisible] = useScrollAnimation(animationConfig.intersectionThreshold.content);
     const [imageRef, isImageVisible] = useScrollAnimation(animationConfig.intersectionThreshold.image);
-    
+
     const { hero } = siteConfig;
 
     return (
@@ -22,15 +22,15 @@ const HeroSection = () => {
                             }`}
                     >
                         {/* Badge */}
-                        <div className={`inline-flex items-center bg-white rounded-full px-4 py-2 shadow-sm mb-6 transition-all duration-500`} 
-                             style={{ transitionDelay: `${animationConfig.delays.badge}ms` }}>
+                        <div className={`inline-flex items-center bg-white rounded-full px-4 py-2 shadow-sm mb-6 transition-all duration-500`}
+                            style={{ transitionDelay: `${animationConfig.delays.badge}ms` }}>
                             <span className="text-sm font-medium text-gray-700">{hero.badge.company}</span>
                             <span className="ml-2 text-sm text-gray-500">{hero.badge.established}</span>
                         </div>
 
                         {/* New Collection */}
                         <p className={`text-primary-500 font-semibold text-sm uppercase tracking-wide mb-4 transition-all duration-500`}
-                           style={{ transitionDelay: `${animationConfig.delays.announcement}ms` }}>
+                            style={{ transitionDelay: `${animationConfig.delays.announcement}ms` }}>
                             {hero.announcement}
                         </p>
 
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
                         {/* CTA Button */}
                         <button className={`inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-500 group hover:scale-105 ${isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                                style={{ transitionDelay: `${animationConfig.delays.cta}ms` }}>
+                            style={{ transitionDelay: `${animationConfig.delays.cta}ms` }}>
                             {hero.cta}
                             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </button>

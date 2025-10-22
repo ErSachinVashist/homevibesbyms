@@ -1,19 +1,78 @@
-# Home Vibes by MS - Modern Furniture Website
+# HomeVibes - Modern Home Decor Website 🏠✨
 
-A modern, responsive furniture e-commerce website built with React, Vite, and Tailwind CSS. This project showcases a clean, professional design inspired by contemporary furniture retailers.
+A modern, responsive home decor e-commerce website built with React, Vite, and Tailwind CSS. This project showcases beautiful home decor collections with a focus on seasonal styling and room inspiration.
+
+🌐 **Live Demo**: [View on GitHub Pages](https://ersachinvashist.github.io/homevibesbyms/)
 
 ## Features
 
-- **Modern Design**: Clean, minimalist interface with a focus on product presentation
+- **Modern Design**: Clean, minimalist interface with a focus on home decor presentation
 - **Responsive Layout**: Fully responsive design that works on desktop, tablet, and mobile devices
-- **Interactive Components**: Dynamic navigation, product showcases, and interactive elements
+- **Interactive Components**: Dynamic navigation with smooth scrolling, product showcases, and room inspiration
 - **Performance Optimized**: Built with Vite for fast development and optimized production builds
 - **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Centralized Content**: All static content managed through a single configuration file
+- **GitHub Pages Ready**: Automated deployment with GitHub Actions
+
+## Live Deployment
+
+This project is automatically deployed to GitHub Pages using GitHub Actions. Every push to the master branch triggers a new deployment.
+
+**Site URL**: https://ersachinvashist.github.io/homevibesbyms/
 
 ## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19**: Modern React with hooks and functional components
+- **Vite**: Fast build tool and development server
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Beautiful, customizable icons
+- **GitHub Pages**: Free hosting for static sites
+- **GitHub Actions**: Automated CI/CD deployment
+
+## Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ErSachinVashist/homevibesbyms.git
+   cd homevibesbyms
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
+
+## Deployment
+
+### Automatic Deployment (Recommended)
+This project uses GitHub Actions for automatic deployment to GitHub Pages. Simply push to the `master` branch and the site will be deployed automatically.
+
+### Manual Deployment
+To manually deploy to GitHub Pages:
+```bash
+npm run deploy
+```
+
+### Deployment Configuration
+- **Base Path**: `/homevibesbyms/` (configured in `vite.config.js`)
+- **Build Output**: `dist/` directory
+- **Deployment Branch**: `gh-pages` (automatically created)
+- **GitHub Actions Workflow**: `.github/workflows/deploy.yml`
 
 ## React Compiler
 

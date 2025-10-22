@@ -4,7 +4,7 @@ import { siteConfig } from '../config/siteConfig';
 
 const Footer = () => {
     const { navigation, brand } = siteConfig;
-    
+
     return (
         <footer className="bg-gray-900 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -78,9 +78,9 @@ const Footer = () => {
                     </p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         {navigation.footer.legal.map((link, index) => (
-                            <a 
+                            <a
                                 key={index}
-                                href={link.href} 
+                                href={link.href}
                                 className="text-gray-400 hover:text-primary-500 text-sm transition-colors"
                             >
                                 {link.name}

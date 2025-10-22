@@ -6,7 +6,7 @@ import { siteConfig, animationConfig } from '../config/siteConfig';
 const ProductCategories = () => {
     const [headerRef, isHeaderVisible] = useScrollAnimation(animationConfig.intersectionThreshold.header);
     const [gridRef, isGridVisible] = useScrollAnimation(animationConfig.intersectionThreshold.grid);
-    
+
     const { categories } = siteConfig;
     const categoryItems = [
         {
@@ -78,7 +78,7 @@ const ProductCategories = () => {
                     ref={gridRef}
                     className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 >
-                                        {categories.items.map((category, index) => (
+                    {categories.items.map((category, index) => (
                         <div
                             key={category.id}
                             className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-8 transition-all duration-500 cursor-pointer group hover:scale-105 hover:shadow-lg ${isGridVisible

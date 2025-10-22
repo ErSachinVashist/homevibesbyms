@@ -4,7 +4,7 @@ import { siteConfig } from '../config/siteConfig';
 
 const RoomShowcases = () => {
     const { roomShowcases } = siteConfig;
-    
+
     return (
         <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +25,7 @@ const RoomShowcases = () => {
                                     <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                                     {/* Room-specific decorative elements */}
                                     {room.decorativeElements?.map((element, elemIndex) => (
-                                        <div 
+                                        <div
                                             key={elemIndex}
                                             className={element.className}
                                         ></div>
@@ -42,7 +42,7 @@ const RoomShowcases = () => {
                                     </button>
                                 </div>
 
-                            {/* Hover Effect */}
+                                {/* Hover Effect */}
                                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300"></div>
                             </div>
                         </div>

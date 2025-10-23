@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    {/* <div>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
                             {navigation.footer.quickLinks.map((link, index) => (
@@ -36,10 +36,10 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Categories */}
-                    <div>
+                    {/* <div>
                         <h3 className="text-lg font-semibold mb-4">Decor Styles</h3>
                         <ul className="space-y-2">
                             {navigation.footer.decorStyles.map((style, index) => (
@@ -50,7 +50,7 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Contact Info */}
                     <div>

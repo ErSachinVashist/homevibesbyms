@@ -84,7 +84,7 @@ const Header = () => {
                     </nav>
 
                     {/* Right Section */}
-                    <div className="flex items-center space-x-4">
+                    <div className="hidden flex items-center space-x-4">
                         {/* Search */}
                         <div className="hidden sm:flex items-center bg-gray-50 rounded-lg px-3 py-2">
                             <Search className="h-4 w-4 text-gray-400 mr-2" />

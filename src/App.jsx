@@ -14,12 +14,12 @@ function App() {
         <section id="home">
           <HeroSection />
         </section>
-        <section id="categories">
+        {/* <section id="categories">
           <ProductCategories />
-        </section>
-        <section id="rooms">
+        </section> */}
+        {/* <section id="rooms">
           <RoomShowcases />
-        </section>
+        </section> */}
         <section id="products">
           <HotProducts />
         </section>

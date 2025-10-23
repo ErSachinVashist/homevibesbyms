@@ -8,29 +8,6 @@ const ProductCategories = () => {
     const [gridRef, isGridVisible] = useScrollAnimation(animationConfig.intersectionThreshold.grid);
 
     const { categories } = siteConfig;
-    const categoryItems = [
-        {
-            id: 1,
-            name: 'Wall Art',
-            icon: '🖼️',
-            bgColor: 'bg-purple-100',
-            hoverColor: 'hover:bg-purple-200',
-        },
-        {
-            id: 2,
-            name: 'Lighting',
-            icon: '�',
-            bgColor: 'bg-amber-100',
-            hoverColor: 'hover:bg-amber-200',
-        },
-        {
-            id: 3,
-            name: 'Textiles',
-            icon: '🏺',
-            bgColor: 'bg-rose-100',
-            hoverColor: 'hover:bg-rose-200',
-        },
-    ];
 
     return (
         <section className="py-16 bg-white">
@@ -50,7 +27,7 @@ const ProductCategories = () => {
                     </h2>
 
                     {/* Category Stats */}
-                    <div className="flex items-center space-x-6 text-sm text-gray-600">
+                    {/* <div className="flex items-center space-x-6 text-sm text-gray-600">
                         <div className="flex items-center">
                             <div className="w-8 h-8 bg-primary-500 rounded mr-2 flex items-center justify-center">
                                 <span className="text-white text-xs">{categories.stats.icon}</span>
@@ -60,17 +37,17 @@ const ProductCategories = () => {
                         <div className="flex items-center">
                             <span className="font-medium">{categories.stats.description}</span>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* See All Categories Link */}
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                         <button className="text-sm text-gray-600 hover:text-primary-500 transition-colors duration-200 flex items-center">
                             <span className="border-b border-gray-300 hover:border-primary-500 transition-colors duration-200">
                                 {categories.ctaText}
                             </span>
                             <ArrowRight className="ml-1 h-3 w-3" />
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Category Grid */}
@@ -81,27 +58,27 @@ const ProductCategories = () => {
                     {categories.items.map((category, index) => (
                         <div
                             key={category.id}
-                            className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-8 transition-all duration-500 cursor-pointer group hover:scale-105 hover:shadow-lg ${isGridVisible
+                            className={`${category.bgColor} ${category.hoverColor} rounded-2xl p-4 transition-all duration-500 cursor-pointer group hover:scale-105 hover:shadow-lg ${isGridVisible
                                 ? 'opacity-100 translate-y-0'
                                 : 'opacity-0 translate-y-8'
                                 }`}
                             style={{
-                                transitionDelay: isGridVisible ? `${index * 150}ms` : '0ms'
+                                transitionDelay: '50ms'
                             }}
                         >
-                            <div className="flex flex-col items-center text-center">
+                            <div className="flex items-center text-center">
                                 {/* Category Icon */}
-                                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
                                     {category.icon}
                                 </div>
 
                                 {/* Category Name */}
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                <h3 className="text-lg font-semibold text-gray-900">
                                     {category.name}
                                 </h3>
 
                                 {/* Arrow Icon */}
-                                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-300 ml-auto">
                                     <ArrowRight className="h-4 w-4 text-gray-600 group-hover:text-primary-500 transition-colors duration-300" />
                                 </div>
                             </div>

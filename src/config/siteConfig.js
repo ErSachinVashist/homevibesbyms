@@ -2,7 +2,7 @@
 export const siteConfig = {
     // Brand Information
     brand: {
-        name: 'HomeVibes',
+        name: 'HomeVibesByMS',
         fullName: 'HomeVibes Decor',
         establishedYear: '2020',
         tagline: 'Transforming spaces with beautiful home decor and accessories since 2020.',
@@ -20,8 +20,8 @@ export const siteConfig = {
     navigation: {
         main: [
             { name: 'Home', href: '#home' },
-            { name: 'Decor', href: '#categories' },
-            { name: 'Inspiration', href: '#rooms' },
+            // { name: 'Decor', href: '#categories' },
+            // { name: 'Inspiration', href: '#rooms' },
             { name: 'Collections', href: '#products' },
             { name: 'Contact', href: '#contact' }
         ],
@@ -49,11 +49,11 @@ export const siteConfig = {
     // Hero Section Content
     hero: {
         badge: {
-            company: 'HomeVibes Decor',
-            established: 'Est. 2020'
+            company: 'MSDecor',
+            established: 'Est. 2025'
         },
         announcement: 'NEW COLLECTION',
-        title: 'Autumn',
+        title: 'Asthetic',
         subtitle: 'Decor',
         cta: 'Explore Collection'
     },
@@ -118,106 +118,36 @@ export const siteConfig = {
         sectionTitle: 'Featured Decor',
         categories: [
             { name: 'New Arrivals', active: true },
-            { name: 'Customer Favorites', active: false },
-            { name: 'Trending Decor', active: false }
+            // { name: 'Customer Favorites', active: false },
+            // { name: 'Trending Decor', active: false }
         ],
         ctaText: 'Browse All Decor',
         products: [
             {
                 id: 1,
-                name: 'Autumn Leaf Wall Art',
-                originalPrice: 89.00,
-                salePrice: 65.00,
-                rating: 4.5,
+                name: 'Name Plates',
+                originalPrice: 4500,
+                salePrice: 3500,
+                rating: 5.0,
                 reviews: 15,
-                badge: 'SALE',
+                badge: 'HOT',
                 badgeColor: 'bg-red-500',
                 image: 'wall-art',
-                color: 'bg-amber-400'
+                color: 'bg-amber-400',
+                sold:'12'
             },
             {
                 id: 2,
-                name: 'Ceramic Vase Set',
-                originalPrice: 75.00,
-                salePrice: 55.00,
+                name: 'Circuit box covers',
+                originalPrice: 4000,
+                salePrice: 3000,
                 rating: 4.8,
                 reviews: 23,
                 badge: 'HOT',
                 badgeColor: 'bg-orange-500',
                 image: 'ceramic-vase',
-                color: 'bg-orange-300'
-            },
-            {
-                id: 3,
-                name: 'Boho Throw Pillows',
-                originalPrice: 45.99,
-                salePrice: 32.99,
-                rating: 4.3,
-                reviews: 8,
-                badge: 'SALE',
-                badgeColor: 'bg-red-500',
-                image: 'throw-pillows',
-                color: 'bg-rose-400'
-            },
-            {
-                id: 4,
-                name: 'Macrame Plant Hanger',
-                originalPrice: 35.99,
-                salePrice: 28.99,
-                rating: 4.7,
-                reviews: 12,
-                badge: 'HOT',
-                badgeColor: 'bg-orange-500',
-                image: 'macrame-hanger',
-                color: 'bg-green-400'
-            },
-            {
-                id: 5,
-                name: 'Edison Bulb Lamp',
-                originalPrice: 89.99,
-                salePrice: 69.99,
-                rating: 4.2,
-                reviews: 18,
-                badge: 'HOT',
-                badgeColor: 'bg-orange-500',
-                image: 'edison-lamp',
-                color: 'bg-yellow-600'
-            },
-            {
-                id: 6,
-                name: 'Woven Storage Basket',
-                originalPrice: 65.00,
-                salePrice: 48.00,
-                rating: 4.9,
-                reviews: 45,
-                badge: 'HOT',
-                badgeColor: 'bg-orange-500',
-                image: 'storage-basket',
-                color: 'bg-amber-300'
-            },
-            {
-                id: 7,
-                name: 'Golden Mirror Set',
-                originalPrice: 159.99,
-                salePrice: 129.99,
-                rating: 4.6,
-                reviews: 31,
-                badge: 'HOT',
-                badgeColor: 'bg-orange-500',
-                image: 'golden-mirror',
-                color: 'bg-yellow-400'
-            },
-            {
-                id: 8,
-                name: 'Minimalist Wall Clock',
-                originalPrice: 79.99,
-                salePrice: 59.99,
-                rating: 4.4,
-                reviews: 22,
-                badge: 'SALE',
-                badgeColor: 'bg-red-500',
-                image: 'wall-clock',
-                color: 'bg-slate-400'
+                color: 'bg-orange-300',
+                sold:'7'
             }
         ]
     },
@@ -267,7 +197,7 @@ export const themeConfig = {
     },
     gradients: {
         hero: 'from-gray-50 via-green-50 to-gray-100',
-        autumn: 'from-orange-100 to-amber-200',
+        asthetic: 'from-orange-100 to-amber-200',
         decorDisplay: 'from-amber-400 to-orange-500'
     }
 };

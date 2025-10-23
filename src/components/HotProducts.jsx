@@ -4,105 +4,7 @@ import { siteConfig } from '../config/siteConfig';
 
 const HotProducts = () => {
     const { hotProducts } = siteConfig;
-    const products = hotProducts.products || [
-        {
-            id: 1,
-            name: 'Autumn Leaf Wall Art',
-            originalPrice: 89.00,
-            salePrice: 65.00,
-            rating: 4.5,
-            reviews: 15,
-            badge: 'SALE',
-            badgeColor: 'bg-red-500',
-            image: 'wall-art',
-            color: 'bg-amber-400'
-        },
-        {
-            id: 2,
-            name: 'Ceramic Vase Set',
-            originalPrice: 75.00,
-            salePrice: 55.00,
-            rating: 4.8,
-            reviews: 23,
-            badge: 'HOT',
-            badgeColor: 'bg-orange-500',
-            image: 'ceramic-vase',
-            color: 'bg-orange-300'
-        },
-        {
-            id: 3,
-            name: 'Boho Throw Pillows',
-            originalPrice: 45.99,
-            salePrice: 32.99,
-            rating: 4.3,
-            reviews: 8,
-            badge: 'SALE',
-            badgeColor: 'bg-red-500',
-            image: 'throw-pillows',
-            color: 'bg-rose-400'
-        },
-        {
-            id: 4,
-            name: 'Macrame Plant Hanger',
-            originalPrice: 35.99,
-            salePrice: 28.99,
-            rating: 4.7,
-            reviews: 12,
-            badge: 'HOT',
-            badgeColor: 'bg-orange-500',
-            image: 'macrame-hanger',
-            color: 'bg-green-400'
-        },
-        {
-            id: 5,
-            name: 'Edison Bulb Lamp',
-            originalPrice: 89.99,
-            salePrice: 69.99,
-            rating: 4.2,
-            reviews: 18,
-            badge: 'HOT',
-            badgeColor: 'bg-orange-500',
-            image: 'edison-lamp',
-            color: 'bg-yellow-600'
-        },
-        {
-            id: 6,
-            name: 'Woven Storage Basket',
-            originalPrice: 65.00,
-            salePrice: 48.00,
-            rating: 4.9,
-            reviews: 45,
-            badge: 'HOT',
-            badgeColor: 'bg-orange-500',
-            image: 'storage-basket',
-            color: 'bg-amber-300'
-        },
-        {
-            id: 7,
-            name: 'Golden Mirror Set',
-            originalPrice: 159.99,
-            salePrice: 129.99,
-            rating: 4.6,
-            reviews: 31,
-            badge: 'HOT',
-            badgeColor: 'bg-orange-500',
-            image: 'golden-mirror',
-            color: 'bg-yellow-400'
-        },
-        {
-            id: 8,
-            name: 'Minimalist Wall Clock',
-            originalPrice: 79.99,
-            salePrice: 59.99,
-            rating: 4.4,
-            reviews: 22,
-            badge: 'SALE',
-            badgeColor: 'bg-red-500',
-            image: 'wall-clock',
-            color: 'bg-slate-400'
-        },
-    ];
-
+    const products = hotProducts.products
     const renderStars = (rating) => {
         return [...Array(5)].map((_, index) => (
             <Star
@@ -116,7 +18,7 @@ const HotProducts = () => {
     };
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
@@ -140,10 +42,10 @@ const HotProducts = () => {
                     </div>
 
                     {/* All Products Link */}
-                    <button className="mt-4 lg:mt-0 inline-flex items-center text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200">
+                    {/* <button className="mt-4 lg:mt-0 inline-flex items-center text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200">
                         {hotProducts.ctaText}
                         <ArrowRight className="ml-2 h-4 w-4" />
-                    </button>
+                    </button> */}
                 </div>
 
                 {/* Product Grid */}
@@ -186,16 +88,16 @@ const HotProducts = () => {
 
                                 {/* Dimensions */}
                                 <p className="text-xs text-gray-500 mb-3">
-                                    Sold: 20th • 37th • 29th
+                                   Sold: {product.sold}
                                 </p>
 
                                 {/* Pricing */}
                                 <div className="flex items-center space-x-2">
                                     <span className="text-lg font-bold text-gray-900">
-                                        ${product.salePrice.toFixed(2)}
+                                        ₹{product.salePrice}
                                     </span>
                                     <span className="text-sm text-gray-500 line-through">
-                                        ${product.originalPrice.toFixed(2)}
+                                        ₹{product.originalPrice}
                                     </span>
                                 </div>
                             </div>

@@ -1,4 +1,9 @@
 // Site configuration file - All static content consolidated
+import { Instagram, MessageCircleHeart as Whatsapp } from 'lucide-react';
+import mcbox from '/mcbox.png';
+import nameplate from '/nameplate.png';
+
+
 export const siteConfig = {
     // Brand Information
     brand: {
@@ -134,7 +139,8 @@ export const siteConfig = {
                 badgeColor: 'bg-red-500',
                 image: 'wall-art',
                 color: 'bg-amber-400',
-                sold:'12'
+                sold: '12',
+                image: nameplate
             },
             {
                 id: 2,
@@ -147,16 +153,18 @@ export const siteConfig = {
                 badgeColor: 'bg-orange-500',
                 image: 'ceramic-vase',
                 color: 'bg-orange-300',
-                sold:'7'
+                sold: '7',
+                image: mcbox
             }
         ]
     },
 
     // Social Media Links
     socialMedia: [
-        { name: 'Facebook', icon: 'Facebook', href: '#' },
-        { name: 'Twitter', icon: 'Twitter', href: '#' },
-        { name: 'Instagram', icon: 'Instagram', href: '#' }
+        // { name: 'Facebook', icon: Facebook, href: '#' },
+        // { name: 'Twitter', icon: Twitter, href: '#' },
+        { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/doorvibesbyms' },
+        { name: 'WhatsApp', icon: Whatsapp, href: 'https://wa.me/8860496464?text=%22hi,%20i%20am%20intrested%20in%20your%20decors%22' },
     ],
 
     // Copyright Information

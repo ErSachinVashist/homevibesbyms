@@ -93,12 +93,7 @@ const HeroSection = () => {
                             src={decorBg}
                             alt="Home Decor Background"
                             className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                            style={{ marginLeft: 'auto', objectPosition: 'right', width:'50vw' }}
-                            onError={(e) => {
-                                console.error('Image failed to load:', e.target.src);
-                                e.target.style.display = 'none';
-                            }}
-                            onLoad={() => console.log('Image loaded successfully')}
+                            style={{ marginLeft: 'auto', objectPosition: 'right', width:'70%' }}
                         />
 
                     </div>

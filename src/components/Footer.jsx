@@ -1,9 +1,9 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 
 const Footer = () => {
-    const { navigation, brand } = siteConfig;
+    const { navigation, brand, socialMedia } = siteConfig;
 
     return (
         <footer className="bg-gray-900 text-white">
@@ -18,9 +18,22 @@ const Footer = () => {
                             {brand.description}
                         </p>
                         <div className="flex space-x-4">
-                            <Facebook className="h-5 w-5 text-gray-300 hover:text-primary-500 cursor-pointer transition-colors" />
-                            <Twitter className="h-5 w-5 text-gray-300 hover:text-primary-500 cursor-pointer transition-colors" />
-                            <Instagram className="h-5 w-5 text-gray-300 hover:text-primary-500 cursor-pointer transition-colors" />
+                            {socialMedia.map((social, index) => {
+                                const IconComponent = social.icon;
+
+                                return IconComponent ? (
+                                    <a
+                                        key={index}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="h-5 w-5 text-gray-300 hover:text-primary-500 cursor-pointer transition-colors"
+                                        aria-label={social.name}
+                                    >
+                                        <IconComponent className="h-5 w-5" />
+                                    </a>
+                                ) : null;
+                            })}
                         </div>
                     </div>
 
@@ -58,15 +71,15 @@ const Footer = () => {
                         <ul className="space-y-3">
                             <li className="flex items-center">
                                 <Phone className="h-4 w-4 mr-3 text-primary-500" />
-                                <span className="text-gray-300">+1 (555) 123-4567</span>
+                                <span className="text-gray-300">+918860496464</span>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="h-4 w-4 mr-3 text-primary-500" />
-                                <span className="text-gray-300">hello@homevibes.com</span>
+                                <span className="text-gray-300">sachinvashist82@gmail.com</span>
                             </li>
                             <li className="flex items-start">
                                 <MapPin className="h-4 w-4 mr-3 mt-1 text-primary-500" />
-                                <span className="text-gray-300">456 Decor Lane<br />Style City, SC 67890</span>
+                                <span className="text-gray-300">Gurugram Sec-77<br />Haryana, IN 122004</span>
                             </li>
                         </ul>
                     </div>

@@ -55,19 +55,19 @@ const HotProducts = () => {
                             key={product.id}
                             className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 transition-all duration-300 cursor-pointer"
                         >
-                            {/* Product Image */}
+                            {/* Product Image */}flow
                             <div className="relative p-4">
                                 <div className={`${product.color} rounded-xl h-48 flex items-center justify-center relative overflow-hidden`}>
                                     {/* Badge */}
                                     <span className={`absolute top-2 left-2 ${product.badgeColor} text-white text-xs font-bold px-2 py-1 rounded`}>
                                         {product.badge}
                                     </span>
+                                    <img
+                                        src={product.image}
+                                        alt="Home Decor"
+                                        className="h-full"
+                                    />
 
-                                    {/* Product placeholder */}
-                                    <div className="text-white text-center">
-                                        <div className="w-24 h-24 bg-white bg-opacity-20 rounded-lg mx-auto mb-2"></div>
-                                        <span className="text-xs opacity-80">{product.image}</span>
-                                    </div>
                                 </div>
                             </div>
 
@@ -88,7 +88,7 @@ const HotProducts = () => {
 
                                 {/* Dimensions */}
                                 <p className="text-xs text-gray-500 mb-3">
-                                   Sold: {product.sold}
+                                    Sold: {product.sold}
                                 </p>
 
                                 {/* Pricing */}

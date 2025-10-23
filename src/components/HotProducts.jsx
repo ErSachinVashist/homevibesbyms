@@ -55,7 +55,7 @@ const HotProducts = () => {
                             key={product.id}
                             className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 transition-all duration-300 cursor-pointer"
                         >
-                            {/* Product Image */}flow
+                            {/* Product Image */}
                             <div className="relative p-4">
                                 <div className={`${product.color} rounded-xl h-48 flex items-center justify-center relative overflow-hidden`}>
                                     {/* Badge */}
